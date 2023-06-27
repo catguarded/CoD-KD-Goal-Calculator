@@ -2,9 +2,58 @@
 <html>
 <head>
     <title>CoD KD Goal Calculator</title>
+    <style>
+        .input-group {
+            margin-bottom: 1em;
+        }
+    </style>
+    <script src="main.js"></script>
 </head>
 <body>
-    <h1>Basic Calculation</h1>
-    <p>Content coming soon...</p>
+    <div class="input-group">
+        <label>Current Kills:</label>
+        <input id="current-kills" type="number" min="0">
+    </div>
+    <div class="input-group">
+        <label>Current Deaths:</label>
+        <input id="current-deaths" type="number" min="0">
+    </div>
+    <div class="input-group">
+        <label>Current KD:</label>
+        <span id="current-kd"></span>
+    </div>
+    <div class="input-group">
+        <label>AVG K:</label>
+        <input id="avg-k" type="number" min="0">
+    </div>
+    <div class="input-group">
+        <label>AVG D:</label>
+        <input id="avg-d" type="number" min="0">
+    </div>
+    <div class="input-group">
+        <label>AVG KD:</label>
+        <span id="avg-kd"></span>
+    </div>
+    <div class="input-group">
+        <label>New K kills after matches:</label>
+        <span id="new-k"></span>
+    </div>
+    <div class="input-group">
+        <label>New D deaths after matches:</label>
+        <span id="new-d"></span>
+    </div>
+    <div class="input-group">
+        <label>New KD after matches:</label>
+        <span id="new-kd"></span>
+    </div>
+    <div class="input-group">
+        <label>KD Goal:</label>
+        <input id="kd-goal" type="number" min="0">
+    </div>
+    <div class="input-group">
+        <label>Matches Needed:</label>
+        <span id="matches-needed"></span>
+    </div>
+    <button id="calculate-button" onclick="calculate()">Calculate</button>
 </body>
 </html>
