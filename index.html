@@ -67,6 +67,10 @@
         <input id="current-deaths" type="number" min="0">
     </div>
     <div class="input-group">
+        <label>Difference between Current Kills and Current Deaths:</label>
+        <span id="kd-diff"></span>
+    </div>
+    <div class="input-group">
         <label>Current KD:</label>
         <span id="current-kd"></span>
     </div>
@@ -101,6 +105,14 @@
     <div class="input-group">
         <label>Matches Needed:</label>
         <span id="matches-needed"></span>
+    </div>
+        <div class="input-group">
+    <label>Match Time (in minutes):</label>
+    <input id="match-time" type="number" min="0">
+    </div>
+        <div class="input-group">
+    <label>Expected Time to Increase KD (in hours):</label>
+    <span id="expected-time"></span>
     </div>
         <button id="calculate-button" onclick="calculate()">Calculate</button>
     </div>
