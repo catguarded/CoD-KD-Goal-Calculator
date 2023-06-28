@@ -27,7 +27,11 @@ function calculate() {
     document.getElementById('kd-diff').innerText = kdDiff;
 
     // Calculate Expected Time to Increase KD
-    const matchTime = parseFloat(document.getElementById('match-time').value);
-    const expectedTime = (matchesNeeded * matchTime / 60).toFixed(2);
-    document.getElementById('expected-time').innerText = expectedTime;
+const matchTime = parseFloat(document.getElementById('match-time').value);
+const totalMinutes = matchesNeeded * matchTime;
+const hours = Math.floor(totalMinutes / 60);
+const minutes = Math.round(totalMinutes % 60);
+
+const expectedTime = hours.toString().padStart(2, '0') + "H:" + minutes.toString().padStart(2, '0') + "min";
+document.getElementById('expected-time').innerText = expectedTime;
 }
