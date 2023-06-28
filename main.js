@@ -21,4 +21,13 @@ function calculate() {
     document.getElementById('new-d').innerText = newD;
     document.getElementById('new-kd').innerText = newKD;
     document.getElementById('matches-needed').innerText = matchesNeeded;
+
+      // Calculate difference between Current Kills and Current Deaths
+    const kdDiff = Math.abs(currentKills - currentDeaths).toFixed(2);
+    document.getElementById('kd-diff').innerText = kdDiff;
+
+    // Calculate Expected Time to Increase KD
+    const matchTime = parseFloat(document.getElementById('match-time').value);
+    const expectedTime = (matchesNeeded * matchTime / 60).toFixed(2);
+    document.getElementById('expected-time').innerText = expectedTime;
 }
